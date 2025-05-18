@@ -11,8 +11,12 @@
     <message>
         <location filename="un_test.ui" line="23"/>
         <location filename="un_test.ui" line="32"/>
-        <location filename="un_test.ui" line="39"/>
         <source>PushButton</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="un_test.ui" line="39"/>
+        <source>Wirte</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

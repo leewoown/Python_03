@@ -8,6 +8,10 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        self.is_on = False
+
+
         self.ui.pushButton.clicked.connect(self.button_was_clicked)
         self.ui.pushButton_2.clicked.connect(self.button2_was_clicked)
         self.ui.pushButton_3.clicked.connect(self.button3_was_clicked)
@@ -19,7 +23,13 @@ class MainWindow(QMainWindow):
         self.ui.textEdit.append("두 번째 버튼이 클릭되었습니다.")
 
     def button3_was_clicked(self):
-        self.ui.textEdit.append("세 번째 버튼이 클릭되었습니다.")
+        self.is_on = not self.is_on  
+        if self.is_on : 
+            self.ui.pushButton_3.setText("Clear")
+            self.ui.textEdit.append("세 번째 버튼이 클릭되었습니다.")
+        else :
+           self.ui.pushButton_3.setText("Write")
+           self.ui.textEdit.clear()
         
 if __name__ == "__main__":
     app = QApplication(sys.argv)
